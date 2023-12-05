@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Calculadora práatica</title>
+</head>
+<body>
+
+    <canvas class="meu-grafico"></canvas>
+
+
+    <div class="calc-container">
+        <div class="calc-area">
+            <div class="menu">
+                <div class="simples-menu item-menu menu-ativado">
+                    Juros Simples
+                </div>
+                <div class="compostos-menu item-menu">
+                    Juros Compostos
+                </div>
+                <div class="compostos-menu item-menu">
+                    Nossos rendimentos
+                </div>
+            </div>
+            <div class="slide-hidden">
+                <div class="slider">
+                    <div class="slide1">
+                        <div class="container-simples">
+                            <div class="item-simples">
+                                <div class="icone-simples">
+                                    R$
+                                </div>
+                                <div class="input-simples-container">
+                                    <input class="input-simples-valor" placeholder="valor inicial" type="number" name="" id="">
+                                </div>
+                            </div>
+                            <div class="item-simples">
+                                <div class="icone-simples">
+                                    %
+                                </div>
+                                <div class="input-simples-container">
+                                    <input class="input-simples-taxa" placeholder="taxa de juros" type="number" name="" id="">
+                                </div>
+                                <div class="select-simples-container">
+                                    <select class="select-simples-taxa" name="" id="">
+                                        <!--Para o js funcionar o value do option tem que seguir o padrão a seguir: simples-taxa-POSIÇÃO-->
+                                        <option value="simples-taxa-1">Anual</option>
+                                        <option value="simples-taxa-2">Mensal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item-simples">
+                                <div class="input-simples-container">
+                                    <input class="input-simples-tempo" placeholder="tempo" type="number" name="" id="">
+                                </div>
+                                <div class="select-simples-container">
+                                    <select class="select-simples-tempo" name="" id="">
+                                         <!--Para o js funcionar o value do option tem que seguir o padrão a seguir: simples-tempo-POSIÇÃO-->
+                                        <option value="simples-tempo-1">Anos</option>
+                                        <option value="simples-tempo-2">Meses</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="simples-resposta-container">
+                            <div class="item-simples icone-simples-resposta">
+                                
+                            </div>
+                            <div class="item-simples icone-simples-resposta">
+
+                            </div>
+                            <div class="item-simples icone-simples-resposta">
+
+                            </div>
+                        </div>
+                        
+                        <div class="container-botoes-simples container-botoes">
+                            <div class="botao-simples botao-calcular-simples">
+                                Calcular
+                            </div>
+                            <div class="botao-simples botao-voltar-simples">
+                                Voltar
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slide2">
+                        <div class="container-composta">
+                            <div class="item-simples">
+                                <div class="icone-simples">
+                                    R$
+                                </div>
+                                <div class="input-simples-container">
+                                    <input class="input-composta-valor-ini" placeholder="valor inicial" type="number" name="" id="">
+                                </div>
+                            </div>
+                            <div class="item-simples">
+                                <div class="icone-simples">
+                                    R$
+                                </div>
+                                <div class="input-simples-container">
+                                    <input class="input-composta-valor-mes" placeholder="valor mensal" type="number" name="" id="">
+                                </div>
+                            </div>
+                            <div class="item-simples">
+                                <div class="icone-simples">
+                                    %
+                                </div>
+                                <div class="input-simples-container">
+                                    <input class="input-composta-taxa" placeholder="taxa de juros" type="number" name="" id="">
+                                </div>
+                                <div class="select-simples-container">
+                                    <select class="select-composta-taxa" name="" id="">
+                                        <!--Para o js funcionar o value do option tem que seguir o padrão a seguir: simples-taxa-POSIÇÃO-->
+                                        <option value="simples-taxa-1">Anual</option>
+                                        <option value="simples-taxa-2">Mensal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item-simples">
+                                <div class="input-simples-container">
+                                    <input class="input-composta-tempo" placeholder="tempo" type="number" name="" id="">
+                                </div>
+                                <div class="select-simples-container">
+                                    <select class="select-composta-tempo" name="" id="">
+                                         <!--Para o js funcionar o value do option tem que seguir o padrão a seguir: simples-tempo-POSIÇÃO-->
+                                        <option value="simples-tempo-1">Anos</option>
+                                        <option value="simples-tempo-2">Meses</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="composta-resposta-container">
+                            <div class="item-simples icone-composta-resposta">
+                                
+                            </div>
+                            <div class="item-simples icone-composta-resposta">
+
+                            </div>
+                            <div class="item-simples icone-composta-resposta">
+
+                            </div>
+                        </div>
+                        
+                        <div class="container-botoes-simples container-botoes">
+                            <div class="botao-simples botao-calcular-composta">
+                                Calcular
+                            </div>
+                            <div class="botao-simples botao-voltar-composta">
+                                Voltar
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide3">
+                        <div class="container-nosso">
+                            <div class="item-simples">
+                                <div class="icone-simples">
+                                    R$
+                                </div>
+                                <div class="input-simples-container">
+                                    <input class="input-nosso-valor-ini" min="0" placeholder="valor inicial" type="number" name="" id="">
+                                </div>
+                            </div>
+                            <div class="item-simples">
+                                <div class="icone-simples">
+                                    R$
+                                </div>
+                                <div class="input-simples-container">
+                                    <input class="input-nosso-valor-mes" min="0" placeholder="valor mensal" type="number" name="" id="">
+                                </div>
+                            </div>
+                            <div class="item-select-nosso">
+                                simular a  partir de:
+                                <select class="select-nosso-ano" name="" id="">
+                                    <option value="0">2020</option>
+                                    <option value="1">2021</option>
+                                    <option value="2">2022</option>
+                                    <option value="3">2023</option>
+                                </select>
+                                <select class="select-nosso-mes" name="" id="">
+                                    <option value="0">jan</option>
+                                    <option value="1">fev</option>
+                                    <option value="2">mar</option>
+                                    <option value="3">abr</option>
+                                    <option value="4">mai</option>
+                                    <option value="5">jun</option>
+                                    <option value="6">jul</option>
+                                    <option value="7">ago</option>
+                                    <option value="8">set</option>
+                                    <option value="9">out</option>
+                                    <option value="10">nov</option>
+                                    <option value="11">dez</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="nosso-resposta-container">
+                            <div class="item-simples icone-nosso-resposta">
+                                
+                            </div>
+                            <div class="item-simples icone-nosso-resposta">
+
+                            </div>
+                            <div class="item-simples icone-nosso-resposta">
+
+                            </div>
+                        </div>
+                        
+                        <div class="container-botoes-simples container-botoes">
+                            <div class="botao-simples botao-calcular-nosso">
+                                Calcular
+                            </div>
+                            <div class="botao-simples botao-voltar-nosso">
+                                Voltar
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

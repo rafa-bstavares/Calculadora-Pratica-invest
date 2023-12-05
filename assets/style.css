@@ -1,0 +1,207 @@
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --marginWidth: 85vw;
+}
+
+
+
+
+
+.calc-container{
+    height: 100vh;
+    padding: 5rem 0;
+}
+
+.calc-area{
+    margin: 0 auto;
+    width: var(--marginWidth);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+.simples-menu, .compostos-menu{
+    padding: 2rem;
+    font-size: 2.5rem;
+    transition: all .3s linear;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.menu-ativado{
+    border: 2px solid rgb(0, 0, 124);
+    border-bottom: 2px solid transparent;
+    background-color: rgb(52, 52, 255);
+}
+
+
+
+
+.slide-hidden{
+    flex: 1;
+    background-color: rgb(52, 52, 255);
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    width: calc(3*var(--marginWidth));
+    height: 100%;
+    transition: all .7s linear;
+}
+
+.slide1, .slide2, .slide3{
+    width: var(--marginWidth);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+
+
+
+.container-simples{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.item-simples{
+    width: 25%;
+    height: 5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.icone-simples{
+    width: 5rem;
+    background-color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.input-simples-container{
+    flex: 1;
+}
+
+.input-simples-container input{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 1rem;
+}
+
+
+.select-simples-container{
+    width: 10rem;
+}
+
+.select-simples-container select{
+    width: 100%;
+    height: 100%;
+}
+
+.simples-resposta-container, .composta-resposta-container, .nosso-resposta-container{
+    display: none;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.simples-resposta-container .item-simples, .composta-resposta-container .item-simples, .nosso-resposta-container .item-simples{
+    font-size: 2rem;
+}
+
+.icone-simples-resposta{
+    align-items: center;
+}
+
+.botao-simples{
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    background-color: #888;
+    cursor: pointer;
+}
+
+.botao-voltar-simples{
+    display: none;
+}
+
+
+
+
+.container-composta, .container-nosso{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.container-composta .item-simples, .container-nosso .item-simples{
+    width: 40%;
+}
+
+.botao-voltar-composta{
+    display: none;
+}
+
+.icone-composta-resposta, .icone-nosso-resposta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+.botao-voltar-nosso{
+    display: none;
+}
+
+
+.item-select-nosso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    font-size: 1.8rem;
+}
+
+.meu-grafico{
+    width: 50rem;
+    height: auto;
+}
+
+.select-nosso-ano{
+    margin: 2rem 0;
+}
+
